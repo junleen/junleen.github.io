@@ -8,10 +8,9 @@ venue: 'ECCV'
 # paperurl: 
 # citation: ''
 ---
-
-[pdf](https://arxiv.org/pdf/2004.03132.pdf)
+[pdf](https://arxiv.org/pdf/2004.03132.pdf) [code](https://github.com/junleen/Expression-manipulator)
 
 Citation: 
-```bib
+```txt
 Ling, Jun, Han Xue, Li Song, Shuhui Yang, Rong Xie, and Xiao Gu. "Toward fine-grained facial expression manipulation." In European Conference on Computer Vision, pp. 37-53. Springer, Cham, 2020.
 ```
