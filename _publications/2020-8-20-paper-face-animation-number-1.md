@@ -2,9 +2,9 @@
 title: "Toward Fine-grained Facial Expression Manipulation"
 collection: publications
 permalink: /publication/2020-8-20-paper-face-animation-number-1
-excerpt: 'This '
+# excerpt: 'This '
 date: 2020-08-26
-venue: 'ECCV'
+venue: 'ECCV, 2020'
 # paperurl: 
 # citation: ''
 ---
