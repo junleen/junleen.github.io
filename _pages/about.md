@@ -13,7 +13,10 @@ redirect_from:
 
 I am currently a Ph.D student in [MediaLab](https://medialab.sjtu.edu.cn), [Shanghai Jiao Tong University](https://www.sjtu.edu.cn)), supervised by Prof. [Li Song](https://medialab.sjtu.edu.cn/author/li-song/). My interests cover deep learning, computer vision. Currently I mainly working on the areas of generative models, and image/video generation/animation.
 
+# News
+
+
 # Research Interests
 - Generative Models
-- Image/video Generation/Animation
+- Image/Video Generation/Animation
 
