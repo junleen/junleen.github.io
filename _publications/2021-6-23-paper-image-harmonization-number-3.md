@@ -2,7 +2,7 @@
 title: "Region-aware Adaptive Instance Normalization for Image Harmonization"
 collection: publications
 permalink: /publication/2021-6-23-paper-image-harmonization-number-3
-# excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
+excerpt: '**J Ling**, H Xue, L Song, R Xie, X Gu'
 date: 2021-06-23
 venue: 'CVPR'
 # paperurl: 'http://academicpages.github.io/files/paper3.pdf'
