@@ -2,7 +2,7 @@
 title: "Realistic Talking Face Synthesis with Geometry-aware Feature Transformation"
 collection: publications
 permalink: /publication/2020-5-01-paper-title-number-2
-excerpt: 'H Xue, J Ling, L Song, R Xie, W Zhang'
+excerpt: 'H Xue, **J Ling**, L Song, R Xie, W Zhang'
 date: 2020-06-01
 venue: 'ICIP'
 # paperurl: 'https://ieeexplore.ieee.org/abstract/document/9190699'
