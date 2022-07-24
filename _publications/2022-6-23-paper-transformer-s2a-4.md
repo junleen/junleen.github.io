@@ -1,7 +1,7 @@
 ---
 title: "Transformer-S2A: Robust and Efficient Speech-to-Animation"
 collection: publications
-permalink: /publication/2022-6-23-paper-transformer-s2a
+permalink: /publication/2022-6-23-paper-transformer-s2a-4
 # excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
 date: 2022
 venue: 'ICASSP'
