@@ -5,7 +5,7 @@ permalink: /publication/2020-8-20-paper-face-animation-number-1
 excerpt: 'This '
 date: 2020-08-26
 venue: 'ECCV'
-paperurl: 
+# paperurl: 
 # citation: ''
 ---
 
