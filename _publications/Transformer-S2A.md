@@ -1,7 +1,7 @@
 ---
 title: "Transformer-S2A: Robust and Efficient Speech-to-Animation"
 collection: publications
-permalink: /publication/2022-6-23-paper-transformer-s2a-4
+permalink: /publication/Transformer-S2A
 excerpt: 'Liyang Chen, Zhiyong Wu, **Jun Ling**, Runnan Li, Xu Tan, Sheng Zhao'
 date: 2022-01-01
 venue: 'ICASSP'

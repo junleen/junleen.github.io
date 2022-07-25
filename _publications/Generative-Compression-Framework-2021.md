@@ -1,7 +1,7 @@
 ---
 title: "A Generative Compression Framework For Low Bandwidth Video Conference"
 collection: publications
-permalink: /publication/2021-7-23-paper-face-video-compression-3
+permalink: /publication/Generative-Compression-Framework-2021
 excerpt: 'Dahu Feng, Yan Huang, Yiwei Zhang, **Jun Ling**, Anni Tang, Li Song'
 date: 2021-07-23
 venue: 'ICMEW'

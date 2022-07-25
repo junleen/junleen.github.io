@@ -1,7 +1,7 @@
 ---
 title: "Analyzing and Improving Motion Stability for Talking Face Generation"
 collection: publications
-permalink: /publication/2022-7-23-paper-motion-stable-face-5
+permalink: /publication/Motion-Stable-Talking-Face-2022
 excerpt: '**Jun Ling**, Xu Tan, Liyang Chen, Runnan Li, Yuchao Zhang, Sheng Zhao, Li Song, Tao Qin, Tie-Yan Liu'
 date: 2022-07-25
 venue: 'preprint'

@@ -1,7 +1,7 @@
 ---
 title: "Generative Compression for Face Video: A Hybrid Scheme"
 collection: publications
-permalink: /publication/2022-6-23-paper-generative-face-compression
+permalink: /publication/Face-Video-Generative-Compression-2022
 excerpt: 'Anni Tang, Yan Huang, **Jun Ling**, Zhiyu Zhang, Yiwei Zhang, Rong Xie, Li Song'
 date: 2022-07-25
 venue: 'ICME'

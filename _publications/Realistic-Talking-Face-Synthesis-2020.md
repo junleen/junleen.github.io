@@ -1,7 +1,7 @@
 ---
 title: "Realistic Talking Face Synthesis with Geometry-aware Feature Transformation"
 collection: publications
-permalink: /publication/2020-5-01-paper-title-number-2
+permalink: /publication/Realistic-Talking-Face-Synthesis-2020
 excerpt: 'Han Xue, **Jun Ling**, Li Song, Rong Xie, Wenjun Zhang'
 date: 2020-06-01
 venue: 'ICIP'
