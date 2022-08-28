@@ -22,4 +22,4 @@ I am currently a Ph.D student in [MediaLab](https://medialab.sjtu.edu.cn), [Shan
 
 
 # Service
-- Reviewer for ACM MM 2022, IEEE TNNLS(2021, 2022), IEEE TPAMI (2022), IEEE TMM (2022)
+- Reviewer for ACM MM 2022, IEEE TNNLS, IEEE TPAMI, IEEE TMM
