@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Motion-stable talking face generation system that creates realistic talking videos driven by any speech.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StableFace: Analyzing and Improving Motion Stability for Talking Face Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/6883273.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">StableFace: Analyzing and Improving Motion Stability for Talking Face Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://junleen.github.io">Jun Ling</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://tan-xu.github.io">Xu Tan</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=jk6jWXgAAAAJ" target="_blank">Liyang Chen</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=UlMO-z8AAAAJ" target="_blank">Runnan Li</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              Yuchao Zhang<sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ" target="_blank">Sheng Zhao</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://medialab.sjtu.edu.cn/" target="_blank">Li Song</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
+            <span class="author-block"><sup>2</sup>Microsoft Research Asia,</span>
+            <span class="author-block"><sup>3</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>4</sup>Microsoft Cloud+AI</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2208.13717"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2208.13717"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+             
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered"> <!-- has-text-centered-->
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While previous methods for speech-driven talking face generation have shown significant advances in improving the visual and lip-sync quality of the synthesized videos, they have paid less attention to lip motion jitters which can substantially undermine the perceived quality of talking face videos. What causes motion jitters, and how to mitigate the problem? In this paper, we conduct systematic analyses on the motion jittering problem based on a state-of-the-art pipeline that utilizes 3D face representations to bridge the input audio and output video, and implement several effective designs to improve motion stability. This study finds that several factors can lead to jitters in the synthesized talking face video, including jitters from the input face representations, training-inference mismatch, and a lack of dependency modeling in the generation network. 
+          </p>
+          <p>
+            Accordingly, we propose three effective solutions: 1) a Gaussian-based adaptive smoothing module to smooth the 3D face representations to eliminate jitters in the input; 2) augmented erosions added to the input data of the neural renderer in training to simulate the inference distortion to reduce mismatch; 3) an audio-fused transformer generator to model inter-frame dependency. In addition, considering there is no off-the-shelf metric that measures motion jitters for talking face video, we devise an objective metric (Motion Stability Index, MSI) to quantitatively measure the motion jitters. Extensive experimental results show the superiority of the proposed method on motion-stable talking video generation, with superior quality to previous systems. 
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper Figure. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="publication-video">
+          <img src="./static/images/framework.svg" width="900"></img>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Figure. -->
+
+    <!-- Paper Video. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo</h2>
+        <div class="publication-video">
+          <video id="dollyzoom" controls loop playsinline width="900">
+            <source src="./static/media/Supp_demo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video. -->
+
+    <!-- Paper Video of Fig. 1 -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video of Fig. 1</h2>
+        <p>
+          To visualize the lip movements, we concatenate the vertical slice (represented by a red/green/blue line) from each frame and then show the concatenated results at the bottom. 
+        </p>
+        <div class="publication-video">
+          <video id="dollyzoom" controls loop playsinline width="900">
+            <source src="./static/media/Supp_Fig1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video of Fig. 1 -->
+
+    <!-- Paper Video. -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Additional Comparisons</h2>
+        <div class="publication-video">
+          <video id="dollyzoom" controls loop playsinline width="900">
+            <source src="./static/media/Comparisons.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <video id="dollyzoom" controls loop playsinline width="900">
+            <source src="./static/media/Compare_wav2lip.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="publication-video">
+          <video id="dollyzoom" controls loop playsinline width="900">
+            <source src="./static/media/Compare_LiveSP.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper Video. -->
+    
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title">BibTeX</h2>
+  <pre><code>@article{ling2022stableface,
+    title={StableFace: Analyzing and Improving Motion Stability for Talking Face Generation},
+    author={Ling, Jun and Tan, Xu and Chen, Liyang and Li, Runnan and Zhang, Yuchao and Zhao, Sheng and Song, Li},
+    journal={arXiv preprint arXiv:2208.13717},
+    year={2022}
+  }</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We borrow the website template from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, please remember to link back to this page in the footer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
