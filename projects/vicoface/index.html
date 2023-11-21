@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViCoFace</title>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/script.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">ViCoFace: Learning Disentangled Latent Motion Representations for Visual-Consistent Face Reenactment</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Jun Ling</a>,</span>
+            <span class="author-block">
+              <a href="">Han Xue</a>,</span>
+            <span class="author-block">
+              <a href="">Anni Tang</a>,</span>
+            <span class="author-block">
+              <a href="">Rong Xie</a>,</span>
+            <span class="author-block">
+              <a href="https://medialab.sjtu.edu.cn/author/li-song" target="_blank">Li Song</a></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arxiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/junleen/ViCoFace"
+                   class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Unsupervised face reenactment aims to animate a source image to imitate the motions of 
+            a target image while preserving the source portrait attributes (e.g., facial geometry/
+            identity, hair texture, and background in the generated images). While prior methods 
+            can extract the motion from the target image via compact representations (e.g., <a href="https://github.com/AliaksandrSiarohin/first-order-model">key-points</a> or <a href="https://github.com/wyhsirius/LIA">motion bases</a>), they struggle with 
+            preserving portrait attributes in the cross-subject reenactment, as the predicted 
+            motion representations are often coupled with portrait attributes of the target image. 
+          </p>
+          <p>
+            In this work, we propose an effective and cost-efficient face reenactment approach to 
+            address this issue. Our approach is highlighted by two major strengths. First, based on 
+            the theory of latent-motion bases, we decompose the full-head motion into two parts: 
+            the transferable motion and preservable motion, and then compose the full motion 
+            representation using latent motions from both the source image and the target image. 
+            Second, to optimize and learn disentangled motions, we introduce an efficient training 
+            framework, which features two training strategies 1) a mixture training strategy that 
+            encompasses self-reenactment training and cross-subject training for better motion 
+            disentanglement; and 2) a multi-path training strategy that improves the visual 
+            consistency of portrait attributes. Extensive experiments on widely used benchmarks 
+            demonstrate that our method exhibits remarkable generalization ability, e.g., better 
+            motion accuracy and portrait attribute preservation capability, compared to 
+            state-of-the-art baselines. 
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Generator</h3>
+        <div class="content has-text-justified">
+        </div>
+          <div class="column has-text-justified">
+            <img src="./static/images/generator.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Fig. 1. <b>Illustration of our face reenactment framework.</b> We incorporate two latent bases for complete latent representation. The encoder E projects an image into transferable latent coefficients and preservable latent coefficients. We employ a latent composition approach to compose latent motions through linear composition. Then, we employ a generator G to gradually synthesize final images from the encoder features and the composed latent motions. </p>
+          </div>
+        <br>
+        <h3 class="title is-4">Training Framework</h3>
+        <div class="column has-text-justified">
+          <img src="./static/images/framework.png"
+               class="interpolation-image"
+               alt="Interpolate start reference image."/>
+          <p>Fig. 2. <b>Proposed training framework.</b> Differing from many preceding approaches that only use self-reenactment during training, our training framework incorporates 1) a cross-subject training strategy to minimize the gap between training and inference, and 2) a multi-path reenactment strategy and multi-path regularization loss to improve consistency of visual attributes. For cross-subject training, we introduce four effective losses to stabilize the optimization. </p>
+        </div>
+
+        <br/>
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- Video Results. -->
+        <h2 class="title is-3">Video Results</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-5">VoxCeleb1-Test</h3>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test2.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload playsinline width="75%">
+            <source src="./static/supplementary/Test4.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test6.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test8.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test11.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test12.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <br/>
+        <div class="content has-text-justified">
+          <h3 class="title is-5">HDTF</h3>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test20.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test23.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test24.mp4" type="video/mp4">
+          </video>
+          <video id="replay-video" controls preload autoplay playsinline width="75%">
+            <source src="./static/supplementary/Test25.mp4" type="video/mp4">
+          </video>
+        </div>
+        <br/>
+      </div>
+    </div>
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{ling2023vicoface,
+      author    = {Ling, Jun and Xue, Han and Tang, Anni and Xie, Rong and Song, Li},
+      title     = {ViCoFace: Learning Disentangled Latent Motion Representations for Visual-Consistent Face Reenactment},
+      journal   = {arxiv},
+      year      = {2023},
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">source code</a> 
+            and licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative 
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
