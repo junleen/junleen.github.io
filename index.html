@@ -38,7 +38,7 @@
                 <a href="images/portrait.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/portrait_circle.jpg" class="hoverZoomLink"></a>
               </td>
             </tr>
-          </tbody></table>
+          </tbody></table>`3`
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
@@ -50,8 +50,78 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
 
+
+            <tr onmouseout="posetalk_stop()" onmouseover="posetalk_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='posetalk_image'><video  width=100% height=100% muted autoplay loop>
+                  <!-- <source src="projects/posetalk/assets/videos/compare-baseline/baseline-hdtf1.mp4" type="video/mp4"> -->
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/posetalk.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function posetalk_start() {
+                    document.getElementById('posetalk_image').style.opacity = "1";
+                  }
+                  function posetalk_stop() {
+                    document.getElementById('posetalk_image').style.opacity = "0";
+                  }
+                  posetalk_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://junleen.github.io/projects/posetalk">
+                  <span class="papertitle">PoseTalk: Text-and-Audio-based Pose Control and Motion Refinement for One-Shot Talking Head Generation</span>
+                </a>
+                <br>
+                <strong>Jun Ling</strong>, Yiwen Wang, Han Xue, Rong Xie, <a href="https://medialab.sjtu.edu.cn/author/li-song" target="_blank">Li Song</a>
+                <br>
+                <em>Preprint</em>, 2024
+                <br>
+                <a href="https://junleen.github.io/projects/posetalk/">Project page</a>
+                / 
+                <a href=""> Code (coming!)</a>
+                /
+                <a href="https://arxiv.org/abs/2409.02657">arXiv</a>
+                <p></p>
+              </td>
+            </tr>
+
+            <tr onmouseout="memoryface_stop()" onmouseover="memoryface_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='memoryface_image'><video  width=100% height=100% muted autoplay loop>
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/memoryface.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function memoryface_start() {
+                    document.getElementById('memoryface_image').style.opacity = "1";
+                  }
+
+                  function memoryface_stop() {
+                    document.getElementById('memoryface_image').style.opacity = "0";
+                  }
+                  memoryface_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                  <span class="papertitle">Memories Are One-to-many Mapping Alleviators in Talking Face Generation</span>
+                <br>
+                Anni Tang, <a href="https://www.microsoft.com/en-us/research/people/tianyuhe/">Tianyu He</a>, <a href="https://tan-xu.github.io">Xu Tan</a>, <strong>Jun Ling</strong>, Runnan Li, Sheng Zhao, Li Song, Jiang Bian
+                <br>
+                <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2024
+                <br>
+                <a href="https://www.youtube.com/watch?v=O96iRTh5-a8">Demo</a>
+                /
+                <a href="https://ieeexplore.ieee.org/abstract/document/10547422/">paper</a>
+                <p>
+                  Introducing explicit memory and implicit memory for high-quality and lip-synchronized talking head generation.</p>
+              </td>
+            </tr>
                 
             <tr onmouseout="vicoface_stop()" onmouseover="vicoface_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -74,7 +144,7 @@
                 </script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
-                <a href="https://junleen.github.io/projects/stable-face">
+                <a href="https://junleen.github.io/projects/vicoface">
                   <span class="papertitle">ViCoFace: Learning Disentangled Latent Motion Representations for Visual-Consistent Face Reenactment</span>
                 </a>
                 <br>
@@ -83,9 +153,9 @@
                 <em>Under Review</em>, 2023
                 <br>
                 <a href="https://junleen.github.io/projects/vicoface/">Project page</a>
-                /
-                <a>arXiv</a>
-                <p></p>
+                / <a href="https://github.com/junleen/ViCoFace">Code</a> / 
+                <a>paper</a>
+                <p>Proposing motion disentanglement and effective mixed training strategies for appearance-preservable face reenactment</p>
               </td>
             </tr>
             
@@ -154,6 +224,8 @@
                 <br>
                 <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2021 
                 <br>
+                <a href="https://github.com/junleen/RainNet">Code</a>
+                /
                 <a href="https://arxiv.org/abs/2106.02853">arXiv</a>
                 <p></p>
                 <p>Proposing region-wise adaptive instance normalization for image harmonization.</p>
@@ -188,6 +260,8 @@
                 <br>
                 <em>European Conference on Computer Vision (ECCV)</em>, 2020 
                 <br>
+                <a href="https://github.com/junleen/Expression-manipulator">Code</a>
+                /
                 <a href="https://arxiv.org/abs/2004.03132">arXiv</a>
                 <p></p>
                 <p>Adopting relative facial action units as expression editing guidance.</p>
