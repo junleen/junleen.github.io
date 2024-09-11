@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Jun Ling</title>
+
+    <meta name="author" content="Jon Barron">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>J</text></svg>">
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Jun Ling
+                </p>
+                <p>
+                  I am currently a Ph.D candidate at <a href="https://medialab.sjtu.edu.cn/">MediaLab</a> in <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>, supervised by <a href="https://medialab.sjtu.edu.cn/author/li-song/">Prof. Li Song</a>. My current research focuses on visual content creation, e.g., including talking head synthesis, face animation, articulated human generation. In Mar. 2021, I obtained my MSc degree at Shanghai Jiao Tong University, where I was advised by Prof. Li Song and Xiao Gu. I did my BSc at <a href="https://www.ustd.edu.cn/">University of Science and Technology of China</a>. I was fortunate to worked as a research intern at MSRA, and hopefully worked with <a href="https://tan-xu.github.io/">Xu Tan</a> and <a href="https://scholar.google.com/citations?user=UlMO-z8AAAAJ">Runnan Li</a> in 2021. 
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:lingjun@sjtu.edu.cn">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?hl=en&user=XsfjhQ0AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/junleen/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/portrait.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/portrait_circle.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+                <p>
+                  I'm interested in computer vision and image processing. My previous research is mainly about generating facial videos from multiple driving sources. I am open and happy to share and collaborate with you in related fields.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+    
+            <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()"  bgcolor="#ffffd0">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/zipnerf.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/zipnerf.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function zipnerf_start() {
+                    document.getElementById('zipnerf_image').style.opacity = "1";
+                  }
+
+                  function zipnerf_stop() {
+                    document.getElementById('zipnerf_image').style.opacity = "0";
+                  }
+                  zipnerf_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="http://jonbarron.info/zipnerf">
+                  <span class="papertitle">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</span>
+                </a>
+                <br>
+                <strong>Jonathan T. Barron</strong>,
+                <a href="https://bmild.github.io/">Ben Mildenhall</a>,
+                <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
+                <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
+                <a href="https://phogzone.com/">Peter Hedman</a>
+                <br>
+                <em>ICCV</em>, 2023
+                <br>
+                <a href="http://jonbarron.info/zipnerf">project page</a>
+                /
+                <a href="https://www.youtube.com/watch?v=xrrhynRzC8k">video</a>
+                /
+                <a href="https://arxiv.org/abs/2304.06706">arXiv</a>
+                <p></p>
+                <p>
+                Combining mip-NeRF 360 and grid-based models like Instant NGP lets us reduce error rates by 8%&ndash;77% and accelerate training by 24x.
+                </p>
+              </td>
+            </tr>
+            
+            
+            <tr onmouseout="db3d_stop()" onmouseover="db3d_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='db3d_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/owl.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/owl.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function db3d_start() {
+                    document.getElementById('db3d_image').style.opacity = "1";
+                  }
+
+                  function db3d_stop() {
+                    document.getElementById('db3d_image').style.opacity = "0";
+                  }
+                  db3d_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://dreambooth3d.github.io/">
+                  <span class="papertitle">DreamBooth3D: Subject-Driven Text-to-3D Generation</span>
+                </a>
+                <br>
+                
+        <a href="https://amitraj93.github.io/">Amit Raj</a>, <a href="https://www.linkedin.com/in/srinivas-kaza-64223b74">Srinivas Kaza</a>, <a href="https://poolio.github.io/">Ben Poole</a>, <a href="https://m-niemeyer.github.io/">Michael Niemeyer</a>, <a href="https://natanielruiz.github.io/">Nataniel Ruiz</a>, 
+        <a href="https://bmild.github.io/">Ben Mildenhall</a>, <a href="https://scholar.google.com/citations?user=I2qheksAAAAJ">Shiran Zada</a>, <a href="https://kfiraberman.github.io/">Kfir Aberman</a>, <a href="http://people.csail.mit.edu/mrub/">Michael Rubinstein</a>, 
+                <strong>Jonathan T. Barron</strong>, <a href="http://people.csail.mit.edu/yzli/">Yuanzhen Li</a>, <a href="https://varunjampani.github.io/">Varun Jampani</a>
+                <br>
+                <em>ICCV</em>, 2023
+                <br>
+                <a href="https://dreambooth3d.github.io/">project page</a> / 
+                <a href="https://arxiv.org/abs/2303.13508">arXiv</a>
+                <p></p>
+                <p>Combining DreamBooth (personalized text-to-image) and DreamFusion (text-to-3D) yields high-quality, subject-specific 3D assets with text-driven modifications</p>
+              </td>
+            </tr>
+
+                
+            <tr onmouseout="vicoface_stop()" onmouseover="vicoface_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='vicoface_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/vicoface.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/vicoface.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function vicoface_start() {
+                    document.getElementById('vicoface_image').style.opacity = "1";
+                  }
+
+                  function vicoface_stop() {
+                    document.getElementById('vicoface_image').style.opacity = "0";
+                  }
+                  vicoface_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://junleen.github.io/projects/stable-face">
+                  <span class="papertitle">ViCoFace: Learning Disentangled Latent Motion Representations for Visual-Consistent Face Reenactment</span>
+                </a>
+                <br>
+                <strong>Jun Ling</strong>, Han Xue, Anni Tang, Rong Xie, <a href="https://medialab.sjtu.edu.cn/author/li-song" target="_blank">Li Song</a>
+                <br>
+                <em>Under Review</em>, 2023
+                <br>
+                <a href="https://junleen.github.io/projects/vicoface/">Project page</a>
+                /
+                <a>arXiv</a>
+                <p></p>
+              </td>
+            </tr>
+            
+            <tr onmouseout="stable_face_stop()" onmouseover="stable_face_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='stable_face_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/stable_face.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/stable-face.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function stable_face_start() {
+                    document.getElementById('stable_face_image').style.opacity = "1";
+                  }
+
+                  function stable_face_stop() {
+                    document.getElementById('stable_face_image').style.opacity = "0";
+                  }
+                  stable_face_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://junleen.github.io/projects/stable-face">
+                  <span class="papertitle">StableFace: Analyzing and Improving Motion Stability for Talking Face Generation</span>
+                </a>
+                <br>
+                <strong>Jun Ling</strong>,
+                <a href="https://tan-xu.github.io">Xu Tan</a>,
+                <a href="https://scholar.google.com/citations?user=jk6jWXgAAAAJ">Liyang Chen</a>,
+                <a href="https://scholar.google.com/citations?user=UlMO-z8AAAAJ">Runnan Li</a>, Yuchao Zhang,
+                <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ">Sheng Zhao</a>,
+                <a href="https://sites.google.com/corp/view/vittoferrari">Li Song</a>
+                <br>
+                <em>IEEE Journal of Selected Topics in Signal Processing</em>, 2023
+                <br>
+                <a href="https://junleen.github.io/projects/stable-face/">Project page</a>
+                /
+                <a href="https://arxiv.org/abs/2208.13717">arXiv</a>
+                <p></p>
+                <p>
+                  Introducing systematical solutions for motion-stable talking face generation.</p>
+              </td>
+            </tr>
+
+            <tr onmouseout="rainnet_stop()" onmouseover="rainnet_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src='images/image_harmonization.png' width="160">
+                <script type="text/javascript">
+                  function rainnet_start() {
+                    document.getElementById('rainnet_image').style.opacity = "1";
+                  }
+
+                  function rainnet_stop() {
+                    document.getElementById('rainnet_image').style.opacity = "0";
+                  }
+                  rainnet_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Region-aware Adaptive Instance Normalization for Image Harmonization</span>
+                <br>
+                <strong>Jun Ling</strong>, Han Xue, 
+                <a href="https://medialab.sjtu.edu.cn/author/li-song/">Li Song</a>, Rong Xie, Xiao Gu
+                <br>
+                <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2021 
+                <br>
+                <a href="https://arxiv.org/abs/2106.02853">arXiv</a>
+                <p></p>
+                <p>Proposing region-wise adaptive instance normalization for image harmonization.</p>
+              </td>
+            </tr>
+            
+            <tr onmouseout="faem_stop()" onmouseover="faem_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='faem_image'><video  width=100% height=100% muted autoplay loop>
+                  <img src='images/expression_animation.png' width="160">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/expression_animation.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function faem_start() {
+                    document.getElementById('faem_image').style.opacity = "1";
+                  }
+
+                  function faem_stop() {
+                    document.getElementById('faem_image').style.opacity = "0";
+                  }
+                  faem_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <span class="papertitle">Toward Fine-grained Facial Expression Manipulation</span>
+                <br>
+                <strong>Jun Ling</strong>, Han Xue, 
+                <a href="https://medialab.sjtu.edu.cn/author/li-song/">Li Song</a>, Yunhui Zhu, Rong Xie, Xiao Gu
+                <br>
+                <em>European Conference on Computer Vision (ECCV)</em>, 2020 
+                <br>
+                <a href="https://arxiv.org/abs/2004.03132">arXiv</a>
+                <p></p>
+                <p>Adopting relative facial action units as expression editing guidance.</p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  This page is borrowd from <a href="https://jonbarron.info">Jon Barron</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
